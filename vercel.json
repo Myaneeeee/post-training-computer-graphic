@@ -1,3 +1,5 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/QC/index.html" }]
+  "redirects": [
+    { "source": "/(.*)", "destination": "/QC/index.html", "statusCode": 301 }
+  ]
 }
