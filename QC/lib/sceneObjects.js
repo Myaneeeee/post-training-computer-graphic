@@ -21,6 +21,7 @@ export let textMesh;
 export let tableLight, lightSwitch1;
 export let discoLight, lightSwitch2;
 export let pointLight1, pointLight2, pointLight3, pointLight4, lightSwitch3;
+export let person;
 
 export const createSkyboxGeometry = (scene) => {
   const textureLoader = new THREE.TextureLoader();
@@ -181,7 +182,7 @@ export const gltfLoad = (scene) => {
   });
 
   gltfLoader.load("../public/assets/models/person/scene.gltf", (gltf) => {
-    const person = gltf.scene;
+    person = gltf.scene;
     person.position.set(0, -2.5, 0);
     person.scale.set(0.015, 0.015, 0.015);
     person.receiveShadow = true;
